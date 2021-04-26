@@ -1,0 +1,59 @@
+//Fonts
+@import url("https://fonts.googleapis.com/css?family=Barlow:300,400,700,900");
+html, body {
+    font-family: "Barlow", Helvetica, Arial, sans-serif;
+}
+
+//Variables
+@animal-main-color: #6ead3b;
+//styles
+//Main Border
+#border-top, #border-bottom, #border-left, #border-right {
+    background: @animal-main-color;
+    position: fixed;
+}
+
+#border-left, #border-right {
+    top: 0;
+    bottom: 0;
+    width: 10px;
+}
+
+#border-left {
+    left: 0;
+}
+
+#border-right {
+    right: 0;
+}
+
+#border-top, #border-bottom {
+    left: 0;
+    right: 0;
+    height: 10px;
+}
+
+#border-top {
+    top: 0;
+}
+
+#border-bottom {
+    bottom: 0;
+}
+
+//********************
+#sticky-header {
+    height: 130px;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    #center-header {
+        position: fixed;
+        right: 0;
+        left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        min-height: 130px;
+        width: 960px;
+    }
+}
