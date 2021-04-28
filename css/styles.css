@@ -32,6 +32,7 @@ body {
 #border-right {
   background: #6ead3b;
   position: fixed;
+  z-index: 10;
 }
 #border-left,
 #border-right {
@@ -60,8 +61,12 @@ body {
 #sticky-header {
   height: 130px;
   position: fixed;
-  left: 0px;
-  top: 0px;
+  width: inherit;
+  left: 10px;
+  right: 10px;
+  top: 10px;
+  background-color: #fff;
+  z-index: 10;
 }
 #sticky-header #center-header {
   position: fixed;
@@ -71,4 +76,144 @@ body {
   margin-left: auto;
   min-height: 130px;
   width: 960px;
+}
+.spacer {
+  height: 173px;
+  width: 100%;
+}
+.logo-img {
+  position: absolute;
+  top: 23px;
+}
+.parent-div-header {
+  width: 70%;
+  height: 130px;
+  float: right;
+}
+.div-header-buttons {
+  display: inline-block;
+  padding: 0 16;
+}
+.group-buttons {
+  clear: right;
+  position: absolute;
+  bottom: 30px;
+}
+.header-buttons {
+  height: inherit;
+  padding: 0 16 0 16;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  color: #777679;
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+.header-buttons:hover {
+  color: #6ead3b;
+}
+.button-boutique {
+  float: right;
+  border: none;
+  width: 191px;
+  height: 50px;
+  font-size: 16px;
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 700 !important;
+  color: #fff;
+  background-color: #6ead3b;
+  text-transform: uppercase;
+  padding: 0;
+  margin-left: 1px;
+  cursor: pointer;
+}
+.button-boutique:hover {
+  background-color: #dddedf;
+  color: #6ead3b;
+}
+.div-shopping-icon {
+  background-color: #6ead3b;
+  width: 50px;
+  height: 50px;
+  float: right;
+}
+.shopping-icon {
+  top: 50%;
+  left: 50%;
+  height: 22px;
+  width: 22px;
+  padding: 14px;
+}
+.group-banner {
+  height: 484;
+  width: 100%;
+  background-color: #dddedf;
+}
+.banner-content {
+  width: 960px;
+  height: 484px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.banner-paragraphs {
+  height: 290px;
+  width: 616px;
+  float: right;
+  margin-top: 10%;
+  z-index: 2;
+}
+.banner-paragraphs .inner {
+  display: block;
+  text-align: center;
+}
+#first-paragraph {
+  letter-spacing: 0.05em;
+  line-height: 1.2em;
+  font-size: 25px;
+  font-weight: 900 !important;
+  color: #777679;
+  margin: 0;
+}
+#second-paragraph {
+  line-height: 1em;
+  font-size: 70px;
+  font-weight: 900 !important;
+  color: #6ead3b;
+  margin: 0 0 16 0;
+}
+#third-paragraph {
+  letter-spacing: 0.05em;
+  line-height: 1.2em;
+  font-size: 25px;
+  font-weight: 900 !important;
+  color: #777679;
+  margin: 0;
+}
+#banner-carrousel {
+  z-index: 9;
+  height: max-content;
+  width: max-content;
+  position: absolute;
+  top: -65;
+  left: -140;
+}
+#banner-carrousel img {
+  width: 50%;
+  position: relative;
+  left: 60px;
+}
+.middle-content {
+  height: 691px;
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#sweet-goldenpupper-img {
+  width: 682px;
+  height: 510px;
 }
