@@ -4,12 +4,14 @@
 html,
 body {
     font-family: "Barlow", Helvetica, Arial, sans-serif;
+    margin: 0;
 }
 
 //Variables
 @animal-main-color: #6ead3b;
 @grey-font: #777679;
 @pale-grey-main: rgba(221, 222, 223, 1);
+@nouere-comme-mon-ame: black;
 
 //Global uses
 
@@ -51,10 +53,10 @@ body {
 }
 
 #border-bottom {
-    bottom: 0;
+    bottom: 0px;
 }
 
-//********************
+/**************************************************   Header    *********************************************/
 
 #sticky-header {
     height: 130px;
@@ -75,10 +77,14 @@ body {
         min-height: 130px;
         width: 960px;
     }
+
+    &.active {
+        box-shadow: rgb(153 153 153) 0px 5px 8px;
+    }
 }
 
 .spacer {
-    height: 173px;
+    height: 182px;
     width: 100%;
 }
 
@@ -159,6 +165,8 @@ body {
     padding: 14px;
 }
 
+
+/**************************************************   Banner    *********************************************/
 .group-banner {
     height: 484;
     width: 100%;
@@ -178,7 +186,8 @@ body {
     width: 616px;
     float: right;
     margin-top: 10%;
-    z-index: 2;
+    position: relative;
+    z-index: 8;
 
     .inner {
         display: block;
@@ -213,20 +222,47 @@ body {
 }
 
 #banner-carrousel {
-    z-index: 9;
-    height: max-content;
-    width: max-content;
+    z-index: 5;
     position: absolute;
+    height: inherit;
+    width: inherit;
     top: -65;
-    left: -140;
+    left: -130;
 
     img {
-        width: 50%;
-        position: relative;
+        position: absolute;
         left: 60px;
+        transition: opacity 5s ease-in-out;
+    }
+
+    #f1 {
+        height: 585px;
+        width: 585px;
+    }
+
+    #f2 {
+        height: 617px;
+        width: 625px;
+    }
+
+    #f3 {
+        height: 600px;
+        width: 600px;
     }
 }
 
+#arrow-anchor {
+    position: absolute;
+    left: 50%;
+    margin-top: 30px;
+    z-index: 9;
+
+    a {
+        height: 21px;
+    }
+}
+
+/**************************************************   Middle    *********************************************/
 .middle-content {
     height: 691px;
     width: 960px;
@@ -234,7 +270,550 @@ body {
     margin-right: auto;
 }
 
+#middle-parent {
+    width: 960px;
+    height: 691px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #sweet-goldenpupper-img {
+    overflow: hidden;
+    left: 0;
+    top: 764px;
+    position: absolute;
     width: 682px;
     height: 510px;
+}
+
+#middle-text {
+    top: 100px;
+    position: relative;
+    width: 570px;
+    height: 600px;
+    float: right;
+    left: 100;
+
+    h2 {
+        margin-top: 0;
+        line-height: 1em;
+        font-size: 48px;
+        text-transform: uppercase;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 900;
+        color: #6ead3b;
+    }
+
+    p {
+        width: 536px;
+        font-family: 'Barlow', sans-serif !important;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 22px;
+        color: @grey-font;
+    }
+
+    .middle-column {
+        width: 275px;
+        height: max-content;
+        position: relative;
+        float: left;
+
+        h3 {
+            letter-spacing: .15em;
+            color: @animal-main-color;
+            text-transform: uppercase;
+            font-size: 14px !important;
+            line-height: 19px;
+            font-family: 'Barlow', sans-serif;
+        }
+
+        p {
+            width: 260px;
+            font-family: 'Barlow', sans-serif !important;
+            font-weight: 300;
+            font-size: 13px;
+        }
+
+        .info-column {
+            float: right;
+            width: 275px;
+            height: 160px;
+            position: relative;
+        }
+    }
+}
+
+.button-rdv {
+    width: 254px;
+    height: 50px;
+    clear: both;
+    float: left;
+    letter-spacing: .05em;
+    font-family: 'Barlow', sans-serif !important;
+    font-weight: 700 !important;
+    background: @animal-main-color;
+    line-height: 19px;
+    font-size: 16px;
+    box-shadow: none;
+    text-shadow: none;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 30px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: @pale-grey-main;
+        color: @animal-main-color;
+    }
+}
+
+#middle-spacing {
+    width: 100%;
+    height: 88px;
+}
+
+.divider-solid {
+    border-top: 1px solid #bbb;
+    width: 115px;
+}
+
+
+/**************************************************   Doggo    *********************************************/
+#parent-doggo {
+    width: 100%;
+    height: 590px;
+    position: relative;
+    background-color: @pale-grey-main;
+
+    #section-doggo {
+        margin-left: auto;
+        margin-right: auto;
+        width: 960px;
+        height: inherit;
+
+        #doggo-image {
+            width: 510px;
+            height: 679px;
+            float: left;
+            position: absolute;
+            left: 60;
+            top: -90;
+
+
+            img {
+                width: inherit;
+                height: inherit;
+            }
+        }
+
+        #logo-passion {
+            height: 159px;
+            width: 150px;
+            float: right;
+            position: relative;
+            top: 80px;
+            right: 50px;
+
+            img {
+                height: inherit;
+                width: inherit;
+            }
+        }
+
+        #doggo-text {
+            width: 540;
+            float: right;
+            height: inherit;
+        }
+
+        #doggo-title {
+            width: 536px;
+            float: right;
+            display: block;
+            top: 80px;
+            right: 310px;
+            position: absolute;
+
+            h2 {
+                height: 96px;
+                margin-top: 0px;
+                margin-bottom: 16px;
+                padding: 0;
+                line-height: 1em;
+                font-size: 48px !important;
+                font-family: 'Barlow', sans-serif;
+                font-weight: 900 !important;
+                color: @animal-main-color;
+            }
+
+            p {
+                height: 43px;
+                font-family: 'Barlow', sans-serif !important;
+                letter-spacing: 10%;
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 22px;
+                color: @grey-font;
+            }
+
+            #doggo-list {
+                width: inherit;
+                position: relative;
+                display: flex;
+                margin-left: -40;
+
+                .doggo-sublist {
+                    width: 588px;
+                    height: inherit;
+
+                    ul {
+                        color: @grey-font;
+                        margin: 14px;
+                        font-size: 14px;
+                        line-height: 17px;
+                        margin-left: 16px;
+
+                        li {
+                            font-family: 'Barlow', sans-serif;
+                            font-size: 13px;
+                            padding: 4px;
+                            margin: 0px;
+                        }
+                    }
+
+                    #doggo-list-left {
+                        width: 275px;
+                        height: auto;
+
+                    }
+
+                    #doggo-list-right {
+                        width: 313px;
+                        height: auto;
+                    }
+                }
+
+            }
+
+            .button-rdv {
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+
+/**************************************************   Boutique    *********************************************/
+#parent-boutique {
+    width: 100%;
+    height: 444px;
+    background-color: @nouere-comme-mon-ame;
+
+    #image-boutique {
+        width: 50%;
+        height: 444px;
+        float: right;
+        position: relative;
+
+        img {
+            height: inherit;
+            width: 100%;
+        }
+    }
+
+    #section-boutique {
+        margin-left: auto;
+        margin-right: auto;
+        width: 960px;
+        height: 100%;
+
+        #boutique-text {
+            height: inherit;
+            width: inherit;
+            top: 100px;
+            position: relative;
+
+            h2 {
+                font-size: 48px !important;
+                font-family: 'Barlow', sans-serif;
+                font-weight: 900 !important;
+                margin-top: 0px;
+                margin-bottom: 16px;
+                line-height: 1em;
+                text-transform: uppercase;
+                padding: 0;
+                display: block;
+                color: @animal-main-color;
+                width: 376px;
+                height: 96px;
+            }
+
+            h4 {
+                margin-bottom: 14px;
+                line-height: 17px;
+                font-size: 15px !important;
+                font-family: 'Barlow', sans-serif;
+                letter-spacing: .15em;
+                color: white;
+                margin: 0;
+                padding: 0;
+                display: block;
+                width: 376px;
+                height: 50px;
+            }
+
+            p {
+                font-family: 'Barlow', sans-serif !important;
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 22px;
+                color: white;
+                width: 376px;
+                height: 65px;
+            }
+        }
+    }
+}
+
+
+
+#section-photos {
+    width: 100%;
+    height: 444px;
+    position: relative;
+
+    img {
+        width: inherit;
+    }
+}
+
+#section-help {
+    width: 100%;
+    height: 303px;
+
+    #text-help {
+        text-align: center;
+
+        h2 {
+            line-height: 1em;
+            font-size: 48px !important;
+            font-family: 'Barlow', sans-serif;
+            font-weight: 900 !important;
+            text-transform: uppercase;
+            color: @animal-main-color;
+            margin-top: 0px;
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            font-size: 14px !important;
+            margin-top: 0px;
+            margin-bottom: 15px;
+            font-family: 'Barlow', sans-serif;
+            letter-spacing: .15em;
+            color: @animal-main-color;
+            text-transform: uppercase;
+        }
+
+        #adress {
+            font-family: 'Barlow', sans-serif !important;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 22px;
+            margin-bottom: 16px;
+            color: @grey-font;
+
+            span {
+                font-weight: 900;
+            }
+        }
+
+        #rdv {
+            line-height: 1.5em;
+            margin-bottom: 16px;
+            font-size: 15px;
+            font-weight: 100;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: @grey-font;
+            font-family: 'Barlow', sans-serif !important;
+        }
+
+        a {
+            text-decoration: none;
+            color: @animal-main-color;
+            font-size: 30px;
+            line-height: 0;
+            font-weight: 700;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            margin: 0px;
+        }
+    }
+}
+
+#section-map {
+    width: 100%;
+    height: 408;
+
+    img {
+        width: inherit;
+        height: inherit
+    }
+
+    ;
+}
+
+#parent-contact {
+    width: 100%;
+    height: 201px;
+    background-color: @animal-main-color;
+
+    #section-contact {
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        width: 960px;
+        height: 100%;
+
+        #info-contact {
+            position: relative;
+            top: 25%;
+            width: inherit;
+
+            img {
+                width: 235px;
+                height: 82px;
+                display: inline-block;
+                filter: brightness(0) invert(1);
+            }
+
+            p {
+                width: fit-content;
+                display: inline-block;
+                line-height: 22px;
+                font-family: 'Barlow', sans-serif !important;
+                font-weight: 300;
+                font-size: 13px;
+                color: white;
+                padding-left: 75px;
+
+                span {
+                    font-size: 11px !important;
+                    font-family: 'Barlow', sans-serif;
+                    font-weight: 700;
+                    letter-spacing: 0.1em;
+                    color: #ffff;
+                    text-transform: uppercase;
+                }
+
+                a {
+                    color: #fff;
+                    text-decoration: none;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    position: absolute;
+    padding-bottom: 10px;
+    background: none;
+    height: 39px;
+    width: 100%;
+
+    #footer-compagnie {
+        margin-left: auto;
+        margin-right: auto;
+        width: 960px;
+        height: 39px;
+
+        #trademark {
+            width: fit-content;
+            float: left;
+            top: 25%;
+            position: relative;
+
+            p {
+                font-size: 8px;
+                color: #ccc;
+                font-family: 'Barlow', sans-serif !important;
+                font-weight: 300;
+                line-height: 22px;
+                margin: 0;
+            }
+        }
+
+        #compagnie {
+            width: fit-content;
+            float: right;
+            top: 25%;
+            position: relative;
+
+            p {
+                font-size: 8px;
+                color: #ccc;
+                font-family: 'Barlow', sans-serif !important;
+                font-weight: 300;
+                line-height: 22px;
+                margin: 0;
+                top: 50%;
+            }
+
+            a {
+                font-weight: 900;
+                text-decoration: none !important;
+                color: #999;
+                cursor: pointer;
+                font-size: 8px;
+                text-align: right;
+                line-height: 22px;
+            }
+        }
+    }
+}
+
+/********************************  css animation   ******************************************/
+
+.fadein img {
+    animation-name: fadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 16.5s;
+}
+
+.fadein>img:nth-child(2) {
+    animation-delay: 5.5s;
+    opacity: 0;
+}
+
+.fadein>img:nth-child(3) {
+    animation-delay: 11s;
+    opacity: 0;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    6.06% {
+        opacity: 1;
+    }
+
+    30.3% {
+        opacity: 1;
+    }
+
+    36.36% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }

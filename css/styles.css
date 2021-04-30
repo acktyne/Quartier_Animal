@@ -25,6 +25,7 @@
 html,
 body {
   font-family: "Barlow", Helvetica, Arial, sans-serif;
+  margin: 0;
 }
 #border-top,
 #border-bottom,
@@ -56,8 +57,9 @@ body {
   top: 0;
 }
 #border-bottom {
-  bottom: 0;
+  bottom: 0px;
 }
+/**************************************************   Header    *********************************************/
 #sticky-header {
   height: 130px;
   position: fixed;
@@ -77,8 +79,11 @@ body {
   min-height: 130px;
   width: 960px;
 }
+#sticky-header.active {
+  box-shadow: #999999 0px 5px 8px;
+}
 .spacer {
-  height: 173px;
+  height: 182px;
   width: 100%;
 }
 .logo-img {
@@ -148,6 +153,7 @@ body {
   width: 22px;
   padding: 14px;
 }
+/**************************************************   Banner    *********************************************/
 .group-banner {
   height: 484;
   width: 100%;
@@ -165,7 +171,8 @@ body {
   width: 616px;
   float: right;
   margin-top: 10%;
-  z-index: 2;
+  position: relative;
+  z-index: 8;
 }
 .banner-paragraphs .inner {
   display: block;
@@ -195,25 +202,509 @@ body {
   margin: 0;
 }
 #banner-carrousel {
-  z-index: 9;
-  height: max-content;
-  width: max-content;
+  z-index: 5;
   position: absolute;
+  height: inherit;
+  width: inherit;
   top: -65;
-  left: -140;
+  left: -130;
 }
 #banner-carrousel img {
-  width: 50%;
-  position: relative;
+  position: absolute;
   left: 60px;
+  transition: opacity 5s ease-in-out;
 }
+#banner-carrousel #f1 {
+  height: 585px;
+  width: 585px;
+}
+#banner-carrousel #f2 {
+  height: 617px;
+  width: 625px;
+}
+#banner-carrousel #f3 {
+  height: 600px;
+  width: 600px;
+}
+#arrow-anchor {
+  position: absolute;
+  left: 50%;
+  margin-top: 30px;
+  z-index: 9;
+}
+#arrow-anchor a {
+  height: 21px;
+}
+/**************************************************   Middle    *********************************************/
 .middle-content {
   height: 691px;
   width: 960px;
   margin-left: auto;
   margin-right: auto;
 }
+#middle-parent {
+  width: 960px;
+  height: 691px;
+  margin-left: auto;
+  margin-right: auto;
+}
 #sweet-goldenpupper-img {
+  overflow: hidden;
+  left: 0;
+  top: 764px;
+  position: absolute;
   width: 682px;
   height: 510px;
+}
+#middle-text {
+  top: 100px;
+  position: relative;
+  width: 570px;
+  height: 600px;
+  float: right;
+  left: 100;
+}
+#middle-text h2 {
+  margin-top: 0;
+  line-height: 1em;
+  font-size: 48px;
+  text-transform: uppercase;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 900;
+  color: #6ead3b;
+}
+#middle-text p {
+  width: 536px;
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 22px;
+  color: #777679;
+}
+#middle-text .middle-column {
+  width: 275px;
+  height: max-content;
+  position: relative;
+  float: left;
+}
+#middle-text .middle-column h3 {
+  letter-spacing: 0.15em;
+  color: #6ead3b;
+  text-transform: uppercase;
+  font-size: 14px !important;
+  line-height: 19px;
+  font-family: 'Barlow', sans-serif;
+}
+#middle-text .middle-column p {
+  width: 260px;
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 300;
+  font-size: 13px;
+}
+#middle-text .middle-column .info-column {
+  float: right;
+  width: 275px;
+  height: 160px;
+  position: relative;
+}
+.button-rdv {
+  width: 254px;
+  height: 50px;
+  clear: both;
+  float: left;
+  letter-spacing: 0.05em;
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 700 !important;
+  background: #6ead3b;
+  line-height: 19px;
+  font-size: 16px;
+  box-shadow: none;
+  text-shadow: none;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.button-rdv:hover {
+  background-color: #dddedf;
+  color: #6ead3b;
+}
+#middle-spacing {
+  width: 100%;
+  height: 88px;
+}
+.divider-solid {
+  border-top: 1px solid #bbb;
+  width: 115px;
+}
+/**************************************************   Doggo    *********************************************/
+#parent-doggo {
+  width: 100%;
+  height: 590px;
+  position: relative;
+  background-color: #dddedf;
+}
+#parent-doggo #section-doggo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  height: inherit;
+}
+#parent-doggo #section-doggo #doggo-image {
+  width: 510px;
+  height: 679px;
+  float: left;
+  position: absolute;
+  left: 60;
+  top: -90;
+}
+#parent-doggo #section-doggo #doggo-image img {
+  width: inherit;
+  height: inherit;
+}
+#parent-doggo #section-doggo #logo-passion {
+  height: 159px;
+  width: 150px;
+  float: right;
+  position: relative;
+  top: 80px;
+  right: 50px;
+}
+#parent-doggo #section-doggo #logo-passion img {
+  height: inherit;
+  width: inherit;
+}
+#parent-doggo #section-doggo #doggo-text {
+  width: 540;
+  float: right;
+  height: inherit;
+}
+#parent-doggo #section-doggo #doggo-title {
+  width: 536px;
+  float: right;
+  display: block;
+  top: 80px;
+  right: 310px;
+  position: absolute;
+}
+#parent-doggo #section-doggo #doggo-title h2 {
+  height: 96px;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  padding: 0;
+  line-height: 1em;
+  font-size: 48px !important;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 900 !important;
+  color: #6ead3b;
+}
+#parent-doggo #section-doggo #doggo-title p {
+  height: 43px;
+  font-family: 'Barlow', sans-serif !important;
+  letter-spacing: 10%;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 22px;
+  color: #777679;
+}
+#parent-doggo #section-doggo #doggo-title #doggo-list {
+  width: inherit;
+  position: relative;
+  display: flex;
+  margin-left: -40;
+}
+#parent-doggo #section-doggo #doggo-title #doggo-list .doggo-sublist {
+  width: 588px;
+  height: inherit;
+}
+#parent-doggo #section-doggo #doggo-title #doggo-list .doggo-sublist ul {
+  color: #777679;
+  margin: 14px;
+  font-size: 14px;
+  line-height: 17px;
+  margin-left: 16px;
+}
+#parent-doggo #section-doggo #doggo-title #doggo-list .doggo-sublist ul li {
+  font-family: 'Barlow', sans-serif;
+  font-size: 13px;
+  padding: 4px;
+  margin: 0px;
+}
+#parent-doggo #section-doggo #doggo-title #doggo-list .doggo-sublist #doggo-list-left {
+  width: 275px;
+  height: auto;
+}
+#parent-doggo #section-doggo #doggo-title #doggo-list .doggo-sublist #doggo-list-right {
+  width: 313px;
+  height: auto;
+}
+#parent-doggo #section-doggo #doggo-title .button-rdv {
+  margin-top: 0px;
+}
+/**************************************************   Boutique    *********************************************/
+#parent-boutique {
+  width: 100%;
+  height: 444px;
+  background-color: black;
+}
+#parent-boutique #image-boutique {
+  width: 50%;
+  height: 444px;
+  float: right;
+  position: relative;
+}
+#parent-boutique #image-boutique img {
+  height: inherit;
+  width: 100%;
+}
+#parent-boutique #section-boutique {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  height: 100%;
+}
+#parent-boutique #section-boutique #boutique-text {
+  height: inherit;
+  width: inherit;
+  top: 100px;
+  position: relative;
+}
+#parent-boutique #section-boutique #boutique-text h2 {
+  font-size: 48px !important;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 900 !important;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  line-height: 1em;
+  text-transform: uppercase;
+  padding: 0;
+  display: block;
+  color: #6ead3b;
+  width: 376px;
+  height: 96px;
+}
+#parent-boutique #section-boutique #boutique-text h4 {
+  margin-bottom: 14px;
+  line-height: 17px;
+  font-size: 15px !important;
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 0.15em;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 376px;
+  height: 50px;
+}
+#parent-boutique #section-boutique #boutique-text p {
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 22px;
+  color: white;
+  width: 376px;
+  height: 65px;
+}
+#section-photos {
+  width: 100%;
+  height: 444px;
+  position: relative;
+}
+#section-photos img {
+  width: inherit;
+}
+#section-help {
+  width: 100%;
+  height: 303px;
+}
+#section-help #text-help {
+  text-align: center;
+}
+#section-help #text-help h2 {
+  line-height: 1em;
+  font-size: 48px !important;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  color: #6ead3b;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+#section-help #text-help h3 {
+  font-size: 14px !important;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 0.15em;
+  color: #6ead3b;
+  text-transform: uppercase;
+}
+#section-help #text-help #adress {
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 22px;
+  margin-bottom: 16px;
+  color: #777679;
+}
+#section-help #text-help #adress span {
+  font-weight: 900;
+}
+#section-help #text-help #rdv {
+  line-height: 1.5em;
+  margin-bottom: 16px;
+  font-size: 15px;
+  font-weight: 100;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #777679;
+  font-family: 'Barlow', sans-serif !important;
+}
+#section-help #text-help a {
+  text-decoration: none;
+  color: #6ead3b;
+  font-size: 30px;
+  line-height: 0;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0px;
+}
+#section-map {
+  width: 100%;
+  height: 408;
+}
+#section-map img {
+  width: inherit;
+  height: inherit;
+}
+#parent-contact {
+  width: 100%;
+  height: 201px;
+  background-color: #6ead3b;
+}
+#parent-contact #section-contact {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 960px;
+  height: 100%;
+}
+#parent-contact #section-contact #info-contact {
+  position: relative;
+  top: 25%;
+  width: inherit;
+}
+#parent-contact #section-contact #info-contact img {
+  width: 235px;
+  height: 82px;
+  display: inline-block;
+  filter: brightness(0) invert(1);
+}
+#parent-contact #section-contact #info-contact p {
+  width: fit-content;
+  display: inline-block;
+  line-height: 22px;
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 300;
+  font-size: 13px;
+  color: white;
+  padding-left: 75px;
+}
+#parent-contact #section-contact #info-contact p span {
+  font-size: 11px !important;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ffff;
+  text-transform: uppercase;
+}
+#parent-contact #section-contact #info-contact p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+footer {
+  position: absolute;
+  padding-bottom: 10px;
+  background: none;
+  height: 39px;
+  width: 100%;
+}
+footer #footer-compagnie {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  height: 39px;
+}
+footer #footer-compagnie #trademark {
+  width: fit-content;
+  float: left;
+  top: 25%;
+  position: relative;
+}
+footer #footer-compagnie #trademark p {
+  font-size: 8px;
+  color: #ccc;
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 0;
+}
+footer #footer-compagnie #compagnie {
+  width: fit-content;
+  float: right;
+  top: 25%;
+  position: relative;
+}
+footer #footer-compagnie #compagnie p {
+  font-size: 8px;
+  color: #ccc;
+  font-family: 'Barlow', sans-serif !important;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 0;
+  top: 50%;
+}
+footer #footer-compagnie #compagnie a {
+  font-weight: 900;
+  text-decoration: none !important;
+  color: #999;
+  cursor: pointer;
+  font-size: 8px;
+  text-align: right;
+  line-height: 22px;
+}
+/********************************  css animation   ******************************************/
+.fadein img {
+  animation-name: fadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 16.5s;
+}
+.fadein > img:nth-child(2) {
+  animation-delay: 5.5s;
+  opacity: 0;
+}
+.fadein > img:nth-child(3) {
+  animation-delay: 11s;
+  opacity: 0;
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  6.06% {
+    opacity: 1;
+  }
+  30.3% {
+    opacity: 1;
+  }
+  36.36% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
